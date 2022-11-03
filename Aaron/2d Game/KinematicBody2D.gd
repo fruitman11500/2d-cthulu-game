@@ -5,9 +5,9 @@ var speed=500
 
 func get_input():
 	if Input.is_action_pressed("left"):
-		velocity.x = 1
+		velocity.x = -1
 	elif Input.is_action_pressed("right"):
-		velocity.x =-1
+		velocity.x = 1
 	else:
 		velocity.x = 0
 	if Input.is_action_pressed('up'):
