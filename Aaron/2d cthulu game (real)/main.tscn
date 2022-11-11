@@ -71,20 +71,15 @@ position = Vector2( 3.8147e-06, -17 )
 scale = Vector2( 4.09375, 4.96875 )
 frames = SubResource( 8 )
 animation = "left"
+frame = 1
 playing = true
 
-[node name="Icon" type="Sprite" parent="."]
-position = Vector2( 134, 121 )
-texture = ExtResource( 2 )
+[node name="Node" type="Node" parent="."]
 
-[node name="Icon2" type="Sprite" parent="."]
-position = Vector2( -95, 147 )
-texture = ExtResource( 2 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node"]
 
-[node name="Icon4" type="Sprite" parent="."]
-position = Vector2( -145, -73 )
-texture = ExtResource( 2 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node"]
 
-[node name="Icon3" type="Sprite" parent="."]
-position = Vector2( 165, -23 )
+[node name="Icon" type="Sprite" parent="Node/CollisionShape2D"]
+position = Vector2( -108, -40 )
 texture = ExtResource( 2 )
