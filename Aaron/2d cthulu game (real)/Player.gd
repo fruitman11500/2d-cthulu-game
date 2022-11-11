@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var velocity = Vector2()
 var speed = 350
-
+var player_position = $Position2D
 func get_input():
 	if Input.is_action_pressed("down"):
 		velocity.y = 1
