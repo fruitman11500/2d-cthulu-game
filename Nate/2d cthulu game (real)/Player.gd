@@ -1,11 +1,15 @@
 extends KinematicBody2D
+signal started 
 
 var velocity = Vector2()
-var speed = 350
+var speed = 200
 onready var sprite = $sprite
 
 func _ready():
 	sprite.animation = 'stand_right'
+	$Camera2D.zoom.x = 0.7
+	$Camera2D.zoom.y = 0.7
+	emit_signal('started')
 func get_input():
 	if Input.is_action_pressed("down"):
 		velocity.y = 1
@@ -32,3 +36,8 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide(velocity * speed)
+
+
+func _on_Player_started():
+	
+	$Label.text = 'Use WASD to move'
